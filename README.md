@@ -37,9 +37,9 @@ HTML and CSS play two different roles. When we write HTML, we focus on
 structure, hierarchy, and meaning &mdash; the "marking-up" of content.
 Questions in the mind of an HTML author are:
 
-* Is it best to list these members' names with numbers, or bullets?
-* Does this menu belong in the navigation in the header?
-* Should this additional reference be an aside, or a separate section?
+- Is it best to list these members' names with numbers, or bullets?
+- Does this menu belong in the navigation in the header?
+- Should this additional reference be an aside, or a separate section?
 
 These questions deal with structure, hierarchy, and meaning, which
 are concerns of the content layer (HTML).
@@ -47,19 +47,19 @@ are concerns of the content layer (HTML).
 When defining the presentation layer (CSS), here are the questions we ask
 ourselves:
 
-* Do we want the header menu to be stationary, or does it scroll with the
+- Do we want the header menu to be stationary, or does it scroll with the
   browser window?
-* How do we want the content to display inside of a container? For example,
+- How do we want the content to display inside of a container? For example,
   does it fill the whole area, edge-to-edge? Is there white space around
   the content and/or the container?
-* How large should an `H1` be relative to an `H2`? What about an `H3`?
-* What properties should links have? Underline or no underline?
+- How large should an `H1` be relative to an `H2`? What about an `H3`?
+- What properties should links have? Underline or no underline?
   Which color for the normal state versus the hover state? Should the
   visited link state be different?
-* How should the content appear when on a desktop machine versus a
+- How should the content appear when on a desktop machine versus a
   mobile device?
 
-As you ask yourself these questions, your focus is on the *aesthetic* quality
+As you ask yourself these questions, your focus is on the _aesthetic_ quality
 of the page. For each bit of _content_ we can define a _presentation rule_
 that will change the way the HTML is displayed.
 
@@ -79,8 +79,7 @@ CSS selectors are a way of declaring which HTML elements you wish to style.
 Selectors can appear a few different ways:
 
 - The type of HTML element(`h1`, `p`, `div`, etc.)
-- The value of an element's `id` or `class` (`<p id='idvalue'></p>`, `<p
-  class='classname'></p>`)
+- The value of an element's `id` or `class` (`<p id='idvalue'></p>`, `<p class='classname'></p>`)
 - The value of an element's attributes (`value="hello"`)
 - The element's relationship with surrounding elements (a `p` within an element
   with class of `.infobox`)
@@ -97,18 +96,21 @@ The CSS comment syntax is text between "slash-star" and "star-slash"
 /*
 selects all anchor tag elements in the document (e.g. <a href="page-link.html">Page Link</a>)
 */
-a
+a {
+}
 
 /*
 selects all headers of type h3 in the document (e.g. <h3>Type selectors</h3>)
 */
-h3
+h3 {
+}
 
 /*
 selects all paragraph elements in the document (e.g. <p>Type selectors are used
 to...</p>)
 */
-p
+p {
+}
 ```
 
 [Type selectors documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors)
@@ -122,31 +124,35 @@ syntax is: `.classname`. Prefix the class name with a '.'(period).
 select all elements that have the 'important-topic' classname (e.g. <h1 class='important-topic'>
 and <h1 class='important-topic'>)
 */
-.important-topic
+.important-topic {
+}
 
 /*
 select all elements that have the 'helpful-hint' classname (e.g. <p class='helpful-hint'>
 and <p class='helpful-hint'>)
 */
-.helpful-hint
+.helpful-hint {
+}
 ```
 
 You can also use the `id` selector to style elements. However, **there should
 be only one element with a given id** in an HTML document. This can make
 styling with the ID selector ideal for one-off styles. The `id` selector syntax
 is: `#idvalue`. Prefix the id attribute of an element with a `#` (which is
-called "octothorpe," "pound sign", or "hashtag").
+called "octothorp," "pound sign", or "hashtag").
 
 ```css
 /*
 selects the HTML element with the id 'main-header' (e.g. <h1 id='main-header'>)
 */
-#main-header
+#main-header {
+}
 
 /*
 selects the HTML element with the id 'welcome-message' (e.g. <p id='welcome-message'>)
 */
-#welcome-message
+#welcome-message {
+}
 ```
 
 [id selectors documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/ID_selectors)
@@ -167,7 +173,7 @@ To apply a CSS declaration like `color: blue` to a specific HTML
 element, you need to combine your CSS declaration with a CSS selector. The
 association between one or more CSS declarations and a CSS selector is called a
 **CSS declaration block**. CSS declarations (one or more) that applied to a
-specific selector are wrapped by curly braces (`{ }`).  Each declaration inside
+specific selector are wrapped by curly braces (`{ }`). Each declaration inside
 a declaration block **must** be separated by a semi-colon (`;`).
 
 Below is a sample CSS declaration block.
@@ -208,5 +214,3 @@ Declaration blocks are collections of CSS properties and values.
 ## Resources
 
 - [Mozilla Developer Network: Introduction to CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS)
-
-
